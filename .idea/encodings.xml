@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/com/zhongbin/annotation/Annotation.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/zhongbin/annotation/MyAnnotation.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/zhongbin/collection/MyList.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/zhongbin/collection/MySet.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/zhongbin/collections/CollectionsTest.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/zhongbin/demo/CalcDemo.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/src/com/zhongbin/enumerate/CreateEnumBefore5.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/zhongbin/enumerate/CreateEnumByKeyWord.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/zhongbin/genericity/GenericTest.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/zhongbin/genericity/MyGeneric.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/zhongbin/io/FileTest.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/zhongbin/map/MyMap.java" charset="GBK" />
+  </component>
+</project>
