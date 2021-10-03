@@ -3,12 +3,16 @@ package com.zhongbin.collection;
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 import java.util.Vector;
 
 import org.junit.Test;
+
+import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array;
 
 /**
  * List集合:存储元素有序，可重复
@@ -24,8 +28,14 @@ public class MyList {
 	//底层使用的时双向链表存储，对于频繁的插入删除操作，效率比ArrayList高
 	List<Object> linkedList = new LinkedList<>();
 	
+	Queue<Object> queue = new LinkedList<Object>();
+	
+	
+	
 	@Test
 	public void MyListTest() throws Exception {
+		
+		
 		arrayList.add("12 3");
 		arrayList.add(123);
 		
@@ -49,6 +59,16 @@ public class MyList {
 		
 		arrayList.remove(index);//移除index处的某个元素
 		arrayList.remove(o);//移除某个元素
+		
+	}
+	
+	@Test
+	public void testArray() {
+		int[] a = new int[] {1, 2, 3};
+		
+		int[] copyOfRange = Arrays.copyOfRange(a, 0, 0);
+		
+		System.out.println(copyOfRange.length);
 		
 	}
 }

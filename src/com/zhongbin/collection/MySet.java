@@ -46,6 +46,9 @@ public class MySet {
 		User user03 = new User("zhangsan", 001, "zhangsan@hh.com");
 		User user04 = new User("zhangsan", 001, "zhangsan@hh.com");
 		
+		int[][] ret = new int[9][9];
+		
+		
 		hashSet.add("123");
 		hashSet.add("123");
 		hashSet.add("173");
@@ -92,4 +95,61 @@ public class MySet {
 			}
 		});
 	}
+	
+	public static boolean isValidSudoku(char[][] board) {
+		
+        Set<Character> row = new HashSet<>();
+        Set<Character> col = new HashSet<>();
+        int[][] ret = new int[9][9];
+
+        for(int i = 0; i < 9; i++){
+            for(int j = 0; j < 9; j++){
+            	if(board[i][j] != '.') {
+            		if(row.contains(board[i][j]))return false;
+            		row.add(board[i][j]);
+            		
+            		int index = board[i][j] - '0' - 1;
+                    
+                    if(ret[(i / 3) * 3 + j /3][index] == 0)
+                        ret[(i / 3) * 3 + j /3][index]++;
+                    else
+                        return false;
+            	}
+            	
+            	if(board[j][i] != '.') {
+            			if(col.contains(board[j][i]))return false;
+            			col.add(board[j][i]);
+            	}
+            }
+            
+            row.clear();
+            col.clear();
+        }
+
+        return true;
+
+    }
+	public static void main(String[] args) {
+		
+		char[] s = "123456".toCharArray();
+		
+		int len = s.length;
+
+        int head = 0;
+
+        int tail = len - 1;
+
+        while(head < len / 2){
+            int temp = s[head] - s[tail];
+
+            s[head]  = (char)(s[head] - temp);
+            s[tail] = (char)((s[head] + temp));
+            head++;
+            tail--;
+            System.out.println(s);
+        }
+        
+
+    }
+
 }
